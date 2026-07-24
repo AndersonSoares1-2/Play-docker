@@ -5,3 +5,9 @@ services:
 
     volumes:
       - ./:/app
+
+    command: >
+      bash -c "
+      npm ci &&
+      npx playwright test
+      "
