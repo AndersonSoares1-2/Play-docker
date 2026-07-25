@@ -11,7 +11,7 @@ test("has title", async ({ page }) => {
   console.log("Environment variable TEST_ENV:", process.env.TEST_ENV);
   console.log("Environment variable BASE_URL:", process.env.BASE_URL);
   console.log("Environment variable USERNAME:", process.env.USERNAME);
-  console.log("Environment variable PASSWORD:", process.env.PASSWORD);
+  console.log("Environment variable PASSWORD: ", process.env.PASSWORD);
 });
 
 test("get started link", async ({ page }) => {
