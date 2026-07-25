@@ -9,12 +9,6 @@ jobs:
   playwright:
     runs-on: ubuntu-latest
 
-    env:
-      BASE_URL: ${{ secrets.BASE_URL }}
-      USERNAME: ${{ secrets.USERNAME }}
-      PASSWORD: ${{ secrets.PASSWORD }}
-      TEST_ENV: ${{ secrets.TEST_ENV }}
-
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
