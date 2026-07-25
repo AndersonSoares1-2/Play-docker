@@ -9,6 +9,8 @@ jobs:
   playwright:
     runs-on: ubuntu-latest
 
+    environment: dev
+
     env:
       BASE_URL: ${{ secrets.BASE_URL }}
       USERNAME: ${{ secrets.USERNAME }}
@@ -24,8 +26,9 @@ jobs:
           echo "BASE_URL=$BASE_URL"
           echo "USERNAME=$USERNAME"
           echo "TEST_ENV=$TEST_ENV"
-            - name: Executar testes Docker
-              run: docker compose up --abort-on-container-exit
+
+      - name: Executar testes Docker
+        run: docker compose up --abort-on-container-exit
 
       - name: Guardar relatório
         if: always()
