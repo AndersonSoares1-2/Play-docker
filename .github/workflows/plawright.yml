@@ -19,8 +19,13 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      - name: Executar testes Docker
-        run: docker compose up --abort-on-container-exit
+      - name: Check environment variables
+        run: |
+          echo "BASE_URL=$BASE_URL"
+          echo "USERNAME=$USERNAME"
+          echo "TEST_ENV=$TEST_ENV"
+            - name: Executar testes Docker
+              run: docker compose up --abort-on-container-exit
 
       - name: Guardar relatório
         if: always()
