@@ -1,5 +1,12 @@
 services:
   playwright:
+    build: .
+    environment:
+      BASE_URL: ${BASE_URL}
+      USERNAME: ${USERNAME}
+      PASSWORD: ${PASSWORD}
+      TEST_ENV: ${TEST_ENV}
+      
     image: mcr.microsoft.com/playwright:v1.61.1-noble
     working_dir: /app
 

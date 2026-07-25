@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { config } from "dotenv";
 
-config({ path: "./.env", override: false });
+config();
 
 test("has title", async ({ page }) => {
   await page.goto("https://playwright.dev/");
