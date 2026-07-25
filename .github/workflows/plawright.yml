@@ -21,11 +21,11 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      - name: Check environment variables
-        run: |
-          echo "BASE_URL=$BASE_URL"
-          echo "USERNAME=$USERNAME"
-          echo "TEST_ENV=$TEST_ENV"
+      # - name: Check environment variables
+      #   run: |
+      #     echo "BASE_URL=$BASE_URL"
+      #     echo "USERNAME=$USERNAME"
+      #     echo "TEST_ENV=$TEST_ENV"
 
       - name: Executar testes Docker
         run: docker compose up --abort-on-container-exit
